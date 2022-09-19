@@ -319,6 +319,9 @@ function vec3.flip_z(a)
 end
 
 function vec3.angle_to(a, b)
+  if a == b then
+    return 0
+  end
 	return math.acos(a:dot(b) / (a:len() * b:len()))
 end
 
