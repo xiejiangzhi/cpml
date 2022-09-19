@@ -319,8 +319,7 @@ function vec3.flip_z(a)
 end
 
 function vec3.angle_to(a, b)
-	local v = a:normalize():dot(b:normalize())
-	return math.acos(v)
+	return math.acos(a:dot(b) / (a:len() * b:len()))
 end
 
 --- Return a boolean showing if a table is or is not a vec3.

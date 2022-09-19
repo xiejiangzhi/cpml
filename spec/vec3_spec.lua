@@ -249,5 +249,7 @@ describe("vec3:", function()
 		assert.is.equal(angle_to(a, vec3(0, 0, -100)), '90.00')
 		assert.is.equal(angle_to(a, vec3(-10, -10, 0)), '180.00')
 		assert.is.equal(angle_to(a, vec3.unit_z), '90.00')
+
+		assert.is.equal(angle_to(a, a), '0.00')
 	end)
 end)
